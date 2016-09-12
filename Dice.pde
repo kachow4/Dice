@@ -1,10 +1,11 @@
+int count = 0;
 void setup(){
 	size(600, 600);
 	noLoop();
 }
 
 void draw(){
-	background(255);
+	background(255, 204, 204);
 	int sum = 0;
 	for (int a = 0; a < 601; a = a + 100){
 		for (int b = 0; b < 301; b = b + 100){
@@ -16,10 +17,14 @@ void draw(){
 	textAlign(CENTER);
 	textSize(100);
 	text(sum, 300, 530);
+	fill(51, 51, 255);
+	textSize(20);
+	text("# times clicked: " + count, 100, 580);
 }
 
 void mousePressed(){
 	redraw();	
+	count++;
 }
 
 class Die{ 
